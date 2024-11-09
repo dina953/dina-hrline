@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-element Selector Bug</title>
+    <style>
+      
+      * {
+        margin-left: 2px;
+      }
+      .container{
+              display: inline-block;
+      }
+      .lis li::marker {
+            color: rgb(41, 9, 252);
+            content: "🧐 " ;
+      }
+      .container::before {
+        content: "Container:  ";
+        color: green;
+      }
+      p::first-letter {
+        text-decoration: underline;
+        color: rgb(255, 6, 6);
+        border: 2px solid rgb(0, 255, 38);
+      }
+      p::first-line {
+        word-spacing: 3px;
+      }
+
+      p::selection {
+        display: list-item;
+        color: rgb(235, 255, 18);
+        background-color: black;
+      }
+      ul::marker {
+        padding-left: 50px;
+
+      }
+      ul{
+          margin-left: 9px
+          padding:2px
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      This is a Container
+      <p>This is first paragraph.</p>
+      <p>This is second paragraph.</p>
+      <p>This is third paragraph.</p>
+      <ul class="lis">
+        <li>About</li>
+        <li>Thank you</li>
+      </ul>
+    </div>
+  </body>
+</html>
