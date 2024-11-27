@@ -1,0 +1,48 @@
+<!-- Fix Bug: Fix the image to scale both up and down on responsiveness: -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+.responsive1{
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+@media only screen and (max-width:400px){
+      .responsive{
+                  border: 2px solid black;
+      }
+}
+@media only screen and (max-width:600px){
+      .responsive1{
+                  border: 2px solid pink;
+      }
+}
+</style>
+</head>
+<body>
+<h2>Responsive Images</h2>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+  Quis nemo magni nesciunt doloribus quae nihil consequuntur praesentium! Provident,
+   aliquid voluptate.</p>
+<p>Resize the browser window to see the effect.</p>
+<img src="inputs/images.jpeg" alt="Nature" class="responsive" width="600" height="400">
+<img src="inputs/img_nature.jpg" alt="Nature1" class="responsive1" width="600" height="400">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
